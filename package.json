@@ -36,6 +36,6 @@
     "webpack": "^5.88.1"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{vue,js,css,md}": "prettier --write"
   }
 }
