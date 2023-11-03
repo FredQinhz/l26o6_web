@@ -26,11 +26,7 @@ export default defineConfig({
     Components({
       extensions: ["vue"],
       include: [/\.vue$/, /\.vue\?vue/],
-      resolvers: [
-        ElementPlusResolver({
-          importStyle: "sass",
-        }),
-      ],
+      resolvers: [ElementPlusResolver({ importStyle: "sass" })],
       dts: "src/components.d.ts",
     }),
     Unocss({
