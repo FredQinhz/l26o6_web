@@ -23,7 +23,6 @@ const rules = reactive<FormRules>({
      max: 16,
      message: '用户名长度不符合要求(4-16)', t
      rigger: 'change'
-
      
   }, {pattern: /^[a-z\d-_]*$/, message: '用户名只能包含小写字母,数字,下划线和连字符', trigger: 'change'}],
 
