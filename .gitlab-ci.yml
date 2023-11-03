@@ -42,6 +42,9 @@ build-job:       # This job runs in the build stage, which runs first.
     - docker save demo/front -o demo.tar
     - pwd
     - ls
+  artifacts:
+    untracked: true
+
 
 code-quality:
   stage: test
