@@ -23,12 +23,13 @@ const rules = reactive<FormRules>({
      max: 16,
      message: '用户名长度不符合要求(4-16)', t
      rigger: 'change'
-     
+
   }, {pattern: /^[a-z\d-_]*$/, message: '用户名只能包含小写字母,数字,下划线和连字符', trigger: 'change'}],
 
 
   password: [{ required: true, message: '此字段为必填项', trigger: 'change' }, {
     min: 8, max: 56, message: '密码长度不符合要求(8-56)', trigger: 'change'
+
   }, {
     pattern: /^[\x21-\x7e]*$/, message: '密码只能包含字母,数字和符号', trigger: 'change'
   }, {
@@ -76,27 +77,47 @@ const submitForm = (formEl: FormInstance | undefined) => {
 </script>
 
 <template>
-  <el-form class="demo-ruleForm" ref="ruleFormRef" :model="ruleForm" :rules="rules">
+  <el-form
+    class="demo-ruleForm"
+    ref="ruleFormRef"
+    :model="ruleForm"
+    :rules="rules"
+  >
     <el-form-item prop="username">
-      <el-input v-model="ruleForm.username" type="text" :prefix-icon="User" placeholder="用户名" />
+      <el-input
+        v-model="ruleForm.username"
+        type="text"
+        :prefix-icon="User"
+        placeholder="用户名"
+      />
     </el-form-item>
     <el-form-item prop="password">
-      <el-input v-model="ruleForm.password" autocomplete="off" type="password" show-password :prefix-icon="Lock"
-        placeholder="密码" />
+      <el-input
+        v-model="ruleForm.password"
+        autocomplete="off"
+        type="password"
+        show-password
+        :prefix-icon="Lock"
+        placeholder="密码"
+      />
     </el-form-item>
     <el-row justify="center">
-      <el-col :span="12" style="display: flex; justify-content: center; align-items: center">
+      <el-col
+        :span="12"
+        style="display: flex; justify-content: center; align-items: center"
+      >
         <el-form-item>
           <el-button type="primary" @click="submitForm(ruleFormRef)">
             登录
           </el-button>
         </el-form-item>
       </el-col>
-      <el-col :span="12" style="display: flex; justify-content: center; align-items: center">
+      <el-col
+        :span="12"
+        style="display: flex; justify-content: center; align-items: center"
+      >
         <el-form-item>
-          <el-button @click="$router.push('/register')">
-            注册
-          </el-button>
+          <el-button @click="$router.push('/register')"> 注册 </el-button>
         </el-form-item>
       </el-col>
     </el-row>
