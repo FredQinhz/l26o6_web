@@ -41,6 +41,7 @@ build-job:       # This job runs in the build stage, which runs first.
     - docker rmi demo/front
     - docker build -t demo/front .
     - docker save demo/front -o demo.tar
+    - docker rmi demo/front
     - pwd
     - ls
   artifacts:
