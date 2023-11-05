@@ -84,7 +84,6 @@ code-quality:
         CODECLIMATE_REGISTRY=${CODECLIMATE_PREFIX%%/*}
         docker login "$CODECLIMATE_REGISTRY" --username "$CODECLIMATE_REGISTRY_USERNAME" --password "$CODECLIMATE_REGISTRY_PASSWORD"
       fi
-    - docker pull --quiet "$CODE_QUALITY_IMAGE"
     - |
       docker run --rm \
         $(propagate_env_vars \
