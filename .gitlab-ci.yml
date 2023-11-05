@@ -138,5 +138,5 @@ deploy-job:      # This job runs in the deploy stage.
     - pwd
     - ls
     - sshpass -p "${APP_SERVER_PWD}" scp -o StrictHostKeyChecking=no demo.tar root@172.29.4.124:~
-    - sshpass -p "${APP_SERVER_PWD}" ssh -o StrictHostKeyChecking=no root@172.29.4.124 'docker container rm -f demo; docker load -i demo.tar; docker run -d --name demo -p 80:80 demo/front /bin/bash -c "nginx; tail -f /dev/null"'
+    - sshpass -p "${APP_SERVER_PWD}" ssh -o StrictHostKeyChecking=no root@172.29.4.124 'docker container rm -f demo; docker load -i demo.tar; docker run -d --name demo -p 80:80 demo/front'
 
