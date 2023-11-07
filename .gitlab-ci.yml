@@ -129,7 +129,6 @@ deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
   environment: production
   variables:
-    APP_SERVER_PWD: 38OScmtH
     APP_SERVER_IP: 172.29.4.124
 
   script:
