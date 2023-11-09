@@ -26,7 +26,7 @@ const rules = reactive<FormRules>({
     message: "用户名长度不符合要求(4-16)",
                      trigger: "change",
     },
-    {   pattern: /^[a-z\d-_]*$/,message: "用户名只能包含小写字母,数字,下划线和连字符",trigger: "change",
+    {   pattern: /^[a-z\d-_]*$/   ,message: "用户名只能包含小写字母,数字,下划线和连字符",trigger: "change",
     },
   ],
   password: [
