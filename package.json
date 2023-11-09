@@ -36,6 +36,6 @@
     "webpack": "^5.88.1"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "prettier --write"
   }
 }
